@@ -37,7 +37,7 @@ self.BlobBuilder = self.BlobBuilder || self.MozBlobBuilder ||
                    self.WebKitBlobBuilder;
 
 // Prevent errors in browsers that don't support FileError.
-if (self.FileError === undefined) {
+if (typeof FileError === 'undefined') {
   var FileError = function() {};
   FileError.prototype.prototype = Error.prototype;
 }
